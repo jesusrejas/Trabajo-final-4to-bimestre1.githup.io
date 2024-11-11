@@ -1,0 +1,142 @@
+
+:root {
+    --color-azul: #003366; 
+    --color-celeste: #466ec4; 
+    --color-amarillo: #ffcc00; 
+    --color-fondo: #e0f7ff; 
+    --color-texto-seccion: #003366; 
+    --color-texto: #333333;
+    --color-fondo-oscuro: #1a1a1a;
+    --color-texto-oscuro: #f0f0f0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+header {
+    background-color: var(--color-azul);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-celeste);
+    padding: 10px;
+}
+
+nav button {
+    background-color: var(--color-azul);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav button:hover {
+    background-color: var(--color-amarillo);
+    color: var(--color-azul);
+    transform: scale(1.1);
+}
+
+section {
+    padding: 20px;
+    border-bottom: 2px solid var(--color-celeste);
+    color: var(--color-texto-seccion); 
+    background-color: #ffffff; 
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+
+h2, h3 {
+    color: var(--color-azul);
+}
+
+
+a {
+    color: var(--color-amarillo);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-celeste);
+}
+
+
+button[type="submit"] {
+    background-color: var(--color-azul);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-amarillo);
+    color: var(--color-azul);
+    transform: scale(1.1);
+}
+
+
+section img {
+    display: block; 
+    margin: 0 auto; 
+    width: 80%; 
+    max-width: 500px; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+footer {
+    text-align: center;
+    background-color: var(--color-azul);
+    color: white;
+    padding: 10px;
+}
+
+
+body.dark-mode {
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-oscuro);
+}
+
+body.dark-mode header, body.dark-mode nav, body.dark-mode footer {
+    background-color: #333333;
+}
+
+body.dark-mode nav button {
+    background-color: #555555;
+    color: white;
+}
+
+body.dark-mode nav button:hover {
+    background-color: var(--color-amarillo);
+    color: #555555;
+}
+
+body.dark-mode button[type="submit"] {
+    background-color: #555555;
+    color: var(--color-amarillo);
+}
+
+body.dark-mode button[type="submit"]:hover {
+    background-color: var(--color-amarillo);
+    color: #555555;
+}
