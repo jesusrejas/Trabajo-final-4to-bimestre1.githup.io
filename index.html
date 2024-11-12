@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSEC SUCRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ITSEC SUCRE</h1>
+    </header>
+    <nav>
+        <button onclick="scrollToSection('inicio')">Inicio</button>
+        <button onclick="scrollToSection('sistemas')">Sistemas Informáticos</button>
+        <button onclick="scrollToSection('motivo')">Motivo de Elección de la Carrera</button>
+        <button onclick="scrollToSection('informacionPersonal')">Mis Datos</button>
+        <button onclick="scrollToSection('formularioComentarios')">Déjanos un Comentario</button>
+        <button onclick="toggleDarkMode()" style="position: fixed; top: 10px; right: 10px; padding: 10px; 
+        background-color: var(--color-azul); color: white; border:
+         none; cursor: pointer;">Cambiar Tema</button>
+    </nav>
+
+  
+    <main>
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <img src="misión y visión.jpg" alt="Información General DEL ITSEC SUCRE">
+            <article>
+                <h3>Misión</h3>
+                <p>El Instituto Técnico Superior de Educación Comercial Sucre “ITSEC SUCRE” busca formar 
+                    profesionales técnicos y tecnológicos, competitivos y emprendedores, con valores éticos
+                    y humanos para mejorar la calidad de vida y afrontar los grandes desafíos del siglo XXI.</p>
+                <h3>Visión</h3>
+                <p>Ser un Instituto técnico inclusivo que se consolide como referente a nivel nacional, con
+                   docentes idóneos y alta vocación de servicio, formando profesionales integrales con capacidades 
+                   productivas, de emprendimiento e innovación.</p>
+                <h3>Ubicación</h3>
+                <p>C/ Manuel Melean 140. Sucre, BO · Teléfono: 6444156. Celular: 63776724 · 
+                    info@itsecsucre.edu.bo.</p>
+            </article>
+        </section>
+
+        <section id="sistemas">
+            <h2>Sistemas Informáticos</h2>
+            <img src="AULA SISTEMAS.jpg" alt="Información de la carrera de sistemas informáticos en el ITSEC SUCRE">
+            <p>La carrera de sistemas informáticos tiene una duración de 3 años a nivel de técnico superior.
+                Cuenta con docentes calificados, aulas y laboratorios óptimos para las prácticas en aula.
+            </p>
+            <ul>
+                <li>Brinda servicios profesionales en todo campo de manejo y tratamiento de la información.</li>
+                <li>Crea sistemas informáticos para instituciones públicas y privadas.</li>
+                <li>Ensambla equipos de computación.</li>
+                <li>Realiza mantenimiento preventivo y correctivo de hardware.</li>
+                <li>Instala, configura y opera software.</li>
+                <li>Desarrolla programas de sistemas de información.</li>
+                <li>Crea programas de videojuegos.</li>
+                <li>Gestiona y administra bases de datos.</li>
+                <li>Instala, configura y administra redes físicas y virtuales.</li>
+                <li>Brinda soporte informático y de redes.</li>
+                <li>Diseña y crea aplicaciones para dispositivos móviles.</li>
+            </ul>
+        </section>
+        <section id="motivo">
+            <h2>Motivo de Elección de la Carrera</h2>
+            <img src="motivo de elección.jpg" alt="Motivos de elección de la carrera">
+            <p>Las principales razones por las cuales escogí esta carrera son ampliar mi perfil profesional
+                y profundizar en el manejo de las nuevas tecnologías aplicadas a la educación, ámbito en el 
+                cual trabajo.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div id="informacionPersonal">
+                <h3>Mis Datos</h3>
+                <p><strong>Nombre:</strong> Jesus Reinaldo Rejas Leon</p>
+                <p><strong>Nº de celular:</strong> 75289054</p>
+                <p><strong>Email:</strong> jesusrejas.22@gmail.com</p>
+                <p><strong>Redes Sociales:</strong></p>
+                <ul>
+                    <li><a href="https://www.facebook.com/jesusreinaldo.rejasleon?mibextid=ZbWKwL" target="_blank">
+                        Facebook</a></li>
+                </ul>
+            </div>
+
+            <div id="formularioComentarios">
+                <h3>Déjanos un Comentario</h3>
+                <form id="commentForm">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" required></textarea>
+                    
+                    <button type="submit">Enviar Comentario</button>
+                </form>
+                <p id="comentarioConfirmacion"></p> 
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 ITSEC SUCRE</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    
+        document.getElementById("commentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("comentarioConfirmacion").textContent = "¡Gracias por tu comentario!";
+            document.getElementById("commentForm").reset();
+        });
+    
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>    
+</body>
+</html>
